@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<p><b>Total documentos:</b> {{ total_docs }}</p>
+<p><b>Total palabras:</b> {{ total_words }}</p>
+
+<h4>Documentos por año</h4>
+<ul>
+    {% for year, count in docs_per_year.items() %}
+        <li>{{ year }}: {{ count }} documents</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Resultados para: "{{ query }}"</h3>
+
+{% for r in results %}
+<div class="card p-2 m-2">
+    <p><b>URL:</b> {{ r.url }}</p>
+    <p>{{ r.text }}</p>
+    <p><b>Similitud:</b> {{ r.score }}%</p>
+</div>
+{% endfor %}
+
+{% endblock %}

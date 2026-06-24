@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Scrapper</h2>
+
+{% for url in urls %}
+<div class="card m-2 p-3">
+    <p><b>{{ url.link }}</b></p>
+    <p>Status: {{ "Scrapeada" if url.scraped else "No scrapeada" }}</p>
+
+    /scrape/{{ url.id }}Scrapear</a>
+</div>
+{% endfor %}
+
+{% endblock %}

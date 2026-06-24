@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Configuration</h2>
+
+<form method="POST">
+    <input name="url" class="form-control" placeholder="Agregar URL">
+    <button class="btn btn-success mt-2">Add</button>
+</form>
+
+<h4>URLs registradas:</h4>
+
+<ul>
+{% for url in urls %}
+    <li>{{ url.link }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
